@@ -1,0 +1,8 @@
+var a, b;
+begin
+   read a;
+   b := a + 1;
+   if a >= 2 then
+      b := b - a;
+   write b;
+end.                                    
