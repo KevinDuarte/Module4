@@ -440,7 +440,7 @@ void STATEMENT()
             {
                 lines++;
             }
-            else
+            else if(TOKEN != elsesym)
             {
                 TOKEN = semicolonsym;
                 fsetpos(ifp, &filePos2);
@@ -460,6 +460,7 @@ void STATEMENT()
                     inConditional--;
 
                     //jmp end of loop
+                    printf("%d Jump statement", inConditional);
                     printToFile(7,0,lines);
 
                     //returns the file to the previous position
