@@ -10,7 +10,7 @@
 //Constants
 #define MAX_STACK_HEIGHT 2000
 #define MAX_CODE_LENGTH 500
-#define MAX_LEXI_LEVELS 5
+#define MAX_LEXI_LEVELS 10
 
 FILE* ifp, *ofp; //Global input and output file pointers
 
@@ -57,11 +57,12 @@ int pmachinemain()
    stack[0] = 0;
    stack[1] = 0;
    stack[2] = 0;
-   lexi[0] = 0;
-   lexi[1] = 0;
-   lexi[2] = 0;
-   lexi[3] = 0;
-   lexi[4] = 0;
+
+   int i;
+   for(i = 0; i < MAX_LEXI_LEVELS; i++)
+   {
+       lexi[i] = 0;
+   }
 
    int count = codeStore();
 
