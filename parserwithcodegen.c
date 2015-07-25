@@ -428,6 +428,8 @@ void STATEMENT()
             GETTOKEN();
             STATEMENT();
 
+            fpos_t filePos2;
+            fgetpos(ifp, &filePos2);
             if(TOKEN == semicolonsym)
             {
                 GETTOKEN();
@@ -437,6 +439,11 @@ void STATEMENT()
             if(i == 0 && TOKEN == elsesym)
             {
                 lines++;
+            }
+            else
+            {
+                TOKEN = semicolonsym;
+                fsetpos(ifp, &filePos2);
             }
         }
 
