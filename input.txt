@@ -1,8 +1,14 @@
-var a, b;
+var f, n;
+procedure fact;
+ var ans1;
+ begin
+  ans1:= n;
+  n:= n-1;
+  if n = 0 then f := 1;
+  f:=f*ans1;
+ end;
 begin
-   read a;
-   b := a + 1;
-   if a >= 2 then
-      b := b - a;
-   write b;
-end.                                    
+ n:=3;
+ call fact;
+ write f;
+end.
