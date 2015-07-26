@@ -460,7 +460,6 @@ void STATEMENT()
                     inConditional--;
 
                     //jmp end of loop
-                    printf("%d Jump statement", inConditional);
                     printToFile(7,0,lines);
 
                     //returns the file to the previous position
