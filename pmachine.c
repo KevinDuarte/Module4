@@ -204,6 +204,7 @@ void oprSwitch(int m)
    {
       case 0:           //RET
          lexilvl--;
+         lexi[lexilvl] = 0;
          sp = bp - 1;
          pc = stack[sp + 4];
          bp = stack[sp + 3];
